@@ -1,0 +1,448 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+
+  body {
+    @apply font-body text-brown-dark bg-warm-cream antialiased;
+
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    @apply bg-gold/30 text-forest-deep;
+  }
+}
+
+/* =========================================================
+   COMPONENTS
+   ========================================================= */
+
+@layer components {
+  /* =======================================================
+     3D PERSPECTIVE
+     ======================================================= */
+
+  .perspective-container {
+    perspective: 1200px;
+    perspective-origin: center center;
+  }
+
+  .perspective-container-lg {
+    perspective: 1600px;
+    perspective-origin: center center;
+  }
+
+  /* =======================================================
+     GENERAL 3D CARD
+     ======================================================= */
+
+  .card-3d {
+    @apply shadow-3d-sm;
+
+    transform-style: preserve-3d;
+
+    transition:
+      transform 0.4s ease,
+      box-shadow 0.4s ease;
+  }
+
+  .card-3d-hover:hover {
+    transform:
+      translateY(-6px)
+      rotateX(2deg);
+
+    @apply shadow-3d-hover;
+  }
+
+  /* =======================================================
+     IMAGE DEPTH
+     ======================================================= */
+
+  .image-depth {
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+      transform 0.5s ease,
+      box-shadow 0.5s ease;
+  }
+
+  .image-depth:hover {
+    transform:
+      translateZ(8px)
+      scale(1.02);
+
+    @apply shadow-3d-lg;
+  }
+
+  /* =======================================================
+     HERO IMAGE
+     ======================================================= */
+
+  .hero-image-3d {
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+      transform 0.1s linear;
+
+    will-change: transform;
+  }
+
+  /* =======================================================
+     HERO 3D LAYERS
+     ======================================================= */
+
+  .hero-back-layer {
+    position: absolute;
+
+    transform-style: preserve-3d;
+
+    pointer-events: none;
+
+    transition:
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hero-middle-layer {
+    position: absolute;
+
+    transform-style: preserve-3d;
+
+    pointer-events: none;
+
+    transition:
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .hero-main-layer {
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    will-change: transform;
+  }
+
+  .hero-floating-layer {
+    transform-style: preserve-3d;
+
+    will-change: transform;
+  }
+
+  /* =======================================================
+     FLOATING ELEMENT
+     ======================================================= */
+
+  .floating-badge {
+    animation:
+      float 5s ease-in-out infinite;
+  }
+
+  /* =======================================================
+     GALLERY
+     ======================================================= */
+
+  .gallery-item:hover .image-depth {
+    transform:
+      translateZ(12px)
+      scale(1.02);
+  }
+
+  /* =======================================================
+     EDITORIAL IMAGE
+     ======================================================= */
+
+  .editorial-image {
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.7s ease;
+
+    will-change: transform;
+  }
+
+  .editorial-image:hover {
+    transform:
+      translateY(-5px)
+      rotateX(1deg)
+      rotateY(-1deg);
+  }
+
+  /* =======================================================
+     SOFT REVEAL
+     ======================================================= */
+
+  .reveal-up {
+    opacity: 0;
+
+    transform: translateY(24px);
+
+    transition:
+      opacity 0.8s ease,
+      transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal-up.is-visible {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+  /* =======================================================
+     SECTION REVEAL
+     ======================================================= */
+
+  .section-reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+      opacity 0.9s ease,
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .section-reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+@layer utilities {
+  /* =======================================================
+     SCREEN READER ONLY
+     ======================================================= */
+
+  .sr-only {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+
+    clip: rect(0, 0, 0, 0);
+
+    white-space: nowrap;
+
+    border-width: 0;
+  }
+
+  /* =======================================================
+     3D DEPTH UTILITIES
+     ======================================================= */
+
+  .depth-back {
+    transform: translateZ(-60px);
+  }
+
+  .depth-middle {
+    transform: translateZ(-20px);
+  }
+
+  .depth-front {
+    transform: translateZ(40px);
+  }
+
+  .depth-floating {
+    transform: translateZ(70px);
+  }
+
+  /* =======================================================
+     SMOOTH TRANSFORM
+     ======================================================= */
+
+  .smooth-transform {
+    transition:
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* =======================================================
+     HIDE OVERFLOW
+     ======================================================= */
+
+  .overflow-safe {
+    overflow: hidden;
+  }
+}
+
+/* =========================================================
+   FLOAT ANIMATION
+   ========================================================= */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* =========================================================
+   FADE / REVEAL ANIMATIONS
+   ========================================================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1024px) {
+  .perspective-container,
+  .perspective-container-lg {
+    overflow: visible;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .perspective-container,
+  .perspective-container-lg {
+    perspective: 1000px;
+  }
+
+  .hero-back-layer,
+  .hero-middle-layer {
+    opacity: 0.7;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+
+  .perspective-container,
+  .perspective-container-lg {
+    perspective: none;
+  }
+
+  .card-3d,
+  .image-depth,
+  .editorial-image {
+    transform: none;
+  }
+
+  .card-3d:hover,
+  .image-depth:hover,
+  .editorial-image:hover {
+    transform: none;
+  }
+
+  /*
+   * On mobile, the 3D layers become simple visual layers.
+   * This prevents horizontal overflow and keeps the layout clean.
+   */
+
+  .hero-back-layer,
+  .hero-middle-layer {
+    transform: none !important;
+
+    pointer-events: none;
+  }
+
+  .hero-main-layer {
+    transform: none !important;
+  }
+
+  .hero-floating-layer {
+    transform: none !important;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 64px;
+  }
+
+  .hero-back-layer,
+  .hero-middle-layer {
+    display: none;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-back-layer,
+  .hero-middle-layer,
+  .hero-main-layer,
+  .hero-floating-layer {
+    transform: none !important;
+  }
+}
