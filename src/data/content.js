@@ -120,7 +120,7 @@ export const news = {
   subtitle: 'Update terbaru seputar Padukuhan Ngrancah',
   items: [
     {
-      title: 'Launching Website Resmi Ngrancah',
+      title: 'Masjid',
       date: '11 Agustus 2026',
       category: 'Spiritual',
       excerpt:
