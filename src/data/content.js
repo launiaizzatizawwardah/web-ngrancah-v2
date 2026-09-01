@@ -181,7 +181,7 @@ export const umkm = {
       description:
         'Beragam usaha dan keterampilan warga turut menggerakkan perekonomian Ngrancah dan menjadi bagian dari kehidupan masyarakat sehari-hari.',
       image:
-        'https://images.unsplash.com/photo-1556761175-b413da4baf72?w=400&q=80',
+        '/images/gallery/banner1.jpeg',
     },
   ],
 };
