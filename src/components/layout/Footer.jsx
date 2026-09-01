@@ -37,24 +37,9 @@ export default function Footer() {
             <h4 className="font-body font-semibold text-warm-cream mb-4">Hubungi Kami</h4>
             <ul className="space-y-2 font-body text-sm text-cream/70">
               <li>
-                <a href={`mailto:${siteInfo.email}`} className="hover:text-gold transition-colors">
-                  {siteInfo.email}
-                </a>
               </li>
               <li>
-                <a href={`tel:${siteInfo.phone}`} className="hover:text-gold transition-colors">
-                  {siteInfo.phone}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`https://wa.me/${siteInfo.whatsapp}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-gold transition-colors"
-                >
-                  WhatsApp
-                </a>
+               
               </li>
             </ul>
             <div className="flex gap-3 mt-4">

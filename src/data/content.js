@@ -5,13 +5,8 @@ export const siteInfo = {
   tagline: 'Ruang tumbuh, berkarya, dan bersama membangun Ngrancah.',
   description:
     'Padukuhan Ngrancah adalah bagian dari Desa Sriharjo yang terletak di Kecamatan Imogiri, Kabupaten Bantul. Masyarakat Ngrancah hidup rukun, gotong royong, dan berkomitmen membangun kampung halaman yang lestari.',
-  email: 'info@ngrancah.id',
-  phone: '+62 812-3456-7890',
-  whatsapp: '6281234567890',
   social: {
-    instagram: 'https://instagram.com/ngrancah',
-    facebook: 'https://facebook.com/ngrancah',
-    youtube: 'https://youtube.com/@ngrancah',
+    instagram: 'https://www.instagram.com/fspn_grup?igsi=Mm82NDBjaWVtaGs3',
   },
 }
 
@@ -127,18 +122,18 @@ export const news = {
     {
       title: 'Launching Website Resmi Ngrancah',
       date: '11 Agustus 2026',
-      category: 'Pengumuman',
+      category: 'Spiritual',
       excerpt:
-        'Padukuhan Ngrancah resmi meluncurkan website profil sebagai media informasi dan promosi potensi desa.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80',
+        'Masjid Adz-Dzakirin digunakan untuk TPA,Serta kegiatan religius warga lainnya',
+      image: '/images/gallery/masjid.jpeg',
     },
     {
-      title: 'Program Penghijauan 1000 Pohon',
+      title: 'Salah satu joglo di padukuhan',
       date: '5 Agustus 2026',
       category: 'Lingkungan',
       excerpt:
-        'Inisiatif warga menanam 1000 pohon produktif di batas-batas padukuhan untuk menjaga kelestarian alam.',
-      image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=600&q=80',
+        'Salah satu tempat untuk kegiatan warga atau untuk bermusyawarah',
+      image: '/images/gallery/joglo.jpeg',
     },
    {
   title: 'Lapangan Bola Voli Ngrancah',
@@ -172,21 +167,14 @@ export const umkm = {
         '/images/gallery/pemandangan2.jpeg',
     },
     {
-      name: 'Kacang Koro & Tempe',
+      name: 'Kacang Koro',
       category: 'Produk Lokal',
       description:
         'Kacang koro menjadi salah satu hasil lokal Ngrancah yang diolah menjadi tempe dan menjadi bagian dari produk pangan masyarakat.',
       image:
         '/images/gallery/tempe.png',
     },
-    {
-      name: 'Warung Sembako',
-      category: 'Perdagangan',
-      description:
-        'Warung sembako hadir di tengah masyarakat untuk memenuhi berbagai kebutuhan pokok dan kebutuhan sehari-hari warga Ngrancah.',
-      image:
-        'https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=400&q=80',
-    },
+    ,
     {
       name: 'Usaha Warga',
       category: 'Ekonomi Lokal',
@@ -203,52 +191,47 @@ export const gallery = {
   subtitle: 'Momen indah dan keindahan Ngrancah',
   images: [
     {
-      src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80',
+      src: '/images/gallery/atas.png',
       alt: 'Pemandangan sawah Ngrancah',
     },
     {
-      src: 'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80',
+      src: '/images/gallery/petani.png',
       alt: 'Aktivitas warga di lapangan',
     },
     {
-      src: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80',
+      src: '/images/gallery/sawah.png',
       alt: 'Kebun sayur warga',
     },
     {
-      src: 'https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&q=80',
-      alt: 'Suasana pedesaan sore hari',
+      src: '/images/gallery/kambing.png',
+      alt: 'Suasana peternakan',
     },
     {
-      src: 'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&q=80',
-      alt: 'Hutan dan pepohonan',
+      src: '/images/gallery/sunset.jpeg',
+      alt: 'Suasana Sore',
     },
     {
-      src: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=600&q=80',
-      alt: 'Sinar matahari di desa',
+      src: '/images/gallery/sapi.png',
+      alt: 'Suasana peternakan',
     },
   ],
 }
 
-export const statistics = {
-  title: 'Statistik Ngrancah',
-  subtitle: 'Data demografi dan wilayah padukuhan',
-  items: [
-    { label: 'Jumlah KK', value: '200++', suffix: 'Keluarga' },
-    { label: 'Penduduk', value: '1.850', suffix: 'Jiwa' },
-    { label: 'Luas Wilayah', value: '125', suffix: 'Ha' },
-    { label: 'Jumlah RT', value: '4', suffix: 'Rukun Tetangga' },
-    { label: 'Jumlah RW', value: '2', suffix: 'Rukun Warga' },
-    { label: 'UMKM Aktif', value: '12', suffix: 'Usaha' },
-  ],
-}
+
 
 export const location = {
   title: 'Lokasi',
+
   subtitle: 'Kunjungi Padukuhan Ngrancah',
-  address: 'Padukuhan Ngrancah, Desa Sriharjo, Kecamatan Imogiri, Kabupaten Bantul, DIY 55782',
+
+  address:
+    'Padukuhan Ngrancah, Desa Sriharjo, Kecamatan Imogiri, Kabupaten Bantul, DIY 55782',
+
   mapEmbedUrl:
     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7511.949407251229!2d110.38176304037609!3d-7.94808436830487!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a54da5d0050f9%3A0xb625c3a1d0c4f135!2sNgrancah%2C%20Sriharjo%2C%20Kec.%20Imogiri%2C%20Kabupaten%20Bantul%2C%20Daerah%20Istimewa%20Yogyakarta!5e1!3m2!1sid!2sid!4v1787761737769!5m2!1sid!2sid',
-  directions: 'Dari Yogyakarta, arah Imogiri — lanjut ke Desa Sriharjo, ikuti petunjuk arah Padukuhan Ngrancah.',
+
+  directions:
+    'Dari Yogyakarta, arah Imogiri — lanjut ke Desa Sriharjo, ikuti petunjuk arah Padukuhan Ngrancah.',
 }
 
 export const footer = {

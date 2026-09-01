@@ -6,7 +6,7 @@ import Activities from './components/sections/Activities'
 import News from './components/sections/News'
 import UMKM from './components/sections/UMKM'
 import Gallery from './components/sections/Gallery'
-import Statistics from './components/sections/Statistics'
+
 import Location from './components/sections/Location'
 import BackgroundMusic from './components/ui/BackgroundMusic'
 
@@ -20,7 +20,7 @@ export default function App() {
       <News />
       <UMKM />
       <Gallery />
-      <Statistics />
+     
       <Location />
       <BackgroundMusic />
       <audio id="bg-music" loop>
